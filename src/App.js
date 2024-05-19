@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Nav from 'react-bootstrap/Nav';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import { Prolang } from './Prolang';
+import { DataScience } from './DataScience';
+import { Webdevelopment } from './Webdevelopment';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav variant="tabs">
+        <Nav.Item>
+          <Nav.Link as={NavLink} to="/">Programming Languages</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link as={NavLink} to="/Datascience">Data Science</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link as={NavLink} to="/Webdevelopment">Web Development</Nav.Link>
+        </Nav.Item>
+      </Nav>
+      <Routes>
+        <Route path="/" element={<Prolang />} />
+        <Route path="/Datascience" element={<DataScience />} />
+        <Route path="/Webdevelopment" element={<Webdevelopment />} />
+        </Routes>
+    </>
   );
 }
 
