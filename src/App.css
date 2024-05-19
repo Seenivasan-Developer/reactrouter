@@ -1,38 +1,42 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.course-tag {
+  margin-top: -60px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+span.course-tag.premium {
+  background: linear-gradient(23deg,#de2575,#ff5030);
+  color: #fff;
+  font-size: 0.75rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+span.course-tag.free {
+  background: linear-gradient(23deg,#4998fe,#0560d5);
+  color: #fff;
+  font-size: 0.75rem;
+}
+span.course-tag.atomic {
+  background: linear-gradient(23deg,#ff8008,#ffc837);
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+span.course-tag.essential {
+  background: linear-gradient(23deg,#b100ff,#7f00ff);
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.p{
+  font-size: small;
+}
+.ctitle{
+  font-size: medium !important;
+}
+
+.maindiv{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  flex-wrap: wrap;
 }
